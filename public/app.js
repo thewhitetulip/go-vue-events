@@ -18,21 +18,15 @@ new Vue({
 
     fetchEvents: function () {
       var events = [];
-
-      this.$http.get('/api/events').then((response) => {
-        function a(events){
-          // success callback
-         Vue.set('events', events);
-          console.log("success in getting events")  
-        }
-        
-      }, (response) => {
-        // error callback
-        function failfetch (err) {
-          console.log(err);
-        }
-      });
-        
+       this.$http.get('/api/events')
+  .then(response => response.json())
+  .then(result => {
+     Vue.set(this.data, 'events', result);
+      console.log("success in getting events")  
+  })
+  .catch(err => {
+      console.log(err);
+  });
     },
 
     addEvent: function () {

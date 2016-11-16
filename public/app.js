@@ -21,7 +21,7 @@ new Vue({
        this.$http.get('/api/events')
   .then(response => response.json())
   .then(result => {
-     Vue.set(this.data, 'events', result);
+     Vue.set(this.$data, 'events', result);
       console.log("success in getting events")  
   })
   .catch(err => {

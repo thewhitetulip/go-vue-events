@@ -1,15 +1,14 @@
 ## Vue Events Bulletin Board
 
-This is the code for the Vue.js [tutorial on Scotch.io](https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-introduction). In the tutorial we build a events bulletin board application and cover the basics of [Vue](http://vuejs.org/).
+This is the Go backend code for the Vue.js [tutorial on Scotch.io](https://scotch.io/tutorials/build-a-single-page-time-tracking-app-with-vue-js-introduction). In the tutorial we build a events bulletin board application and cover the basics of [Vue](http://vuejs.org/).
 
-## Installation
+Please read the `server.go` file for elaborate comments. 
 
-1. Run `npm install`.
-2. Run `node server.js`.
-3. Visit [http://localhost:8080](http://localhost:8080).
+If you are new to Go, read [my book](http://github.com/thewhitetulip/web-dev-golang-anti-textbook) or read the working code of the project which is taught in the book [here](http://github.com/thewhitetulip/Tasks).
 
-## RESTful API (contributed by Jason Lam)
+## Building the app
 
-1. **Use Node.js & Express for backend server and router.**
-2. **RESTful requests towards the server to simulate CRUD on *events* model, instead of local hardcoded ones.**
-3. Translated into Traditional Chinese.
+1. install Go
+2. `go get github.com/thewhitetulip/go-vue-events`
+3. go run server.go
+4. Open localhost:8080 in your browser

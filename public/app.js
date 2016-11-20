@@ -38,6 +38,7 @@ new Vue({
           .then( result => {
             this.events.push(this.event);
             console.log('Event added!');
+            this.event = { title: '', detail: '', date: '' };
           }).catch( err => {
             console.log(err);
           });

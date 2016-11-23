@@ -3,12 +3,11 @@
 Vue.component('event-item', {
   props: ['event', 'index'],
   template:'\
-  <a href="#" >\
+  <span>\
         <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-bullhorn"></i>  {{event.title }}</h4>\
         <h5><i class="glyphicon glyphicon-calendar" v-if="event.date"></i> {{ event.date }}</h5>\
         <p class="list-group-item-text" v-if="event.detail">{{ event.detail }}</p>\
-        <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(index)">Delete</button>\
-      </a>',
+        <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(index)">Delete</button> </span>',
   methods: {  
      deleteEvent: function (index) {
       if (confirm('Really want to delete？')) {

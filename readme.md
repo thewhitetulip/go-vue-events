@@ -12,3 +12,16 @@ If you are new to Go, read [my book](http://github.com/thewhitetulip/web-dev-gol
 2. `go get github.com/thewhitetulip/go-vue-events`
 3. go run server.go
 4. Open localhost:8080 in your browser
+
+## Build in Docker
+1. [Install Docker](https://docs.docker.com/get-docker/)
+2.```
+docker build --tag go-vue-events:1.0 .
+```
+3.```
+docker run --publish 8000:8080 --detach --name gve go-vue-events:1.0
+```
+### Remove docker image
+```
+docker rm --force gve
+```
